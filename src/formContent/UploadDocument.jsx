@@ -1,7 +1,7 @@
 import React from 'react'
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
-import upload from "./../assets/upload.png";
+import upload from "./../assets/upload.gif";
 const UploadDocument = () => {
   return (
     <Box
