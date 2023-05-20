@@ -1,9 +1,9 @@
 import React from 'react'
-import TableHeader from './../components/TableHeader'
+import  SelectChannelTable from '../components/SelectChannelTable'
 const MapChannels = () => {
   return (
     <div>
-      <TableHeader />
+      <SelectChannelTable />
     </div>
   )
 }

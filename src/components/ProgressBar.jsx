@@ -3,13 +3,12 @@ import Box from "@mui/material/Box";
 import Stepper from "@mui/material/Stepper";
 import Step from "@mui/material/Step";
 import StepLabel from "@mui/material/StepLabel";
-import Button from "@mui/material/Button";
-import Stack from "@mui/material/Stack";
-import Alert from "@mui/material/Alert";
+import { useSelector } from "react-redux";
 
 const steps = ["Upload EDF's", "Map Channels", "Save & Preview"];
 
 const ProgressBar = ({activeState}) => {
+  const {value}=useSelector(state=>state.counter)
   
   return (
     <>
@@ -19,10 +18,10 @@ const ProgressBar = ({activeState}) => {
           backgroundColor: "white",
           mx: "auto",
           p: 2,
-          mb: 2,
+          mb: "12px",
           borderRadius: "8px",
         }}>
-        <Stepper activeStep={activeState} alternativeLabel>
+        <Stepper activeStep={value} alternativeLabel>
           {steps.map((label) => (
             <Step key={label}>
               <StepLabel>{label}</StepLabel>

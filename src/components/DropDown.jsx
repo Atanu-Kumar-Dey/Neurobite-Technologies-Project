@@ -16,7 +16,8 @@ const options = [
   { id: "name7", label: "Channel7" },
 ];
 
-export default function DropDown() {
+export default function DropDown({row,coloumn}) {
+  
   const [channel, setChannel] = React.useState("");
   const handleChange = (event) => {
     localStorage.setItem(SELECT_VALUE_KEY, JSON.stringify(event.target.value));
@@ -31,14 +32,15 @@ export default function DropDown() {
 
   return (
     <div>
-      <FormControl sx={{ minWidth: "150px",textAlign:"center",my:1,bgcolor:"white" }}>
-        <InputLabel id="demo-simple-select-autowidth-label">
+      <FormControl >
+        <InputLabel id="demo-simple-select-autowidth-label" sx={{fontSize:"14px",mt:"-5px"}}>
           Select channel
         </InputLabel>
         <Select
           labelId="demo-simple-select-autowidth-label"
           id="demo-simple-select-autowidth"
           value={channel}
+          sx={{width: "250px", height: "40px",backgroundColor:"white",borderRadius:"10px" }}
           onChange={handleChange}
           autoWidth
           label="channel">

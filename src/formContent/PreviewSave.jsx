@@ -1,11 +1,11 @@
 import React from 'react'
-import TableHeader from './../components/TableHeader'
+import EditChannels from '../components/EditChannels'
 
 const PreviewSave = () => {
   return (
     <div>
        <>
-       
+       <EditChannels  /> 
        </>
     </div>
   )
